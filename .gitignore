@@ -9,6 +9,7 @@
 Web.config
 
 # User-specific files (MonoDevelop/Xamarin Studio)
+Web.config
 *.userprefs
 
 # Build results
