@@ -1,0 +1,69 @@
+﻿@model IEnumerable<NorthwestLabs.Models.WorkOrderTest>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Status.StatusDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test.TestName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderAssay.DateArrived)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestResult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SampleConcentration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerApproval)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RawDataResult)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.StatusDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test.TestName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderAssay.DateArrived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SampleConcentration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerApproval)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RawDataResult)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WorkOrderTestID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WorkOrderTestID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WorkOrderTestID })
+        </td>
+    </tr>
+}
+
+</table>

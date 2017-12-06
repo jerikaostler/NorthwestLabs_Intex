@@ -1,0 +1,74 @@
+﻿@model NorthwestLabs.Models.WorkOrderTest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WorkOrderTest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.StatusDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test.TestName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test.TestName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkOrderAssay.DateArrived)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkOrderAssay.DateArrived)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TestResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleConcentration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SampleConcentration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerApproval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerApproval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RawDataResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RawDataResult)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WorkOrderTestID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

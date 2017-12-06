@@ -1,0 +1,39 @@
+﻿@model IEnumerable<NorthwestLabs.Models.TestMaterial>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Material.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test.TestName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Material.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test.TestName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TestMaterialID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TestMaterialID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TestMaterialID })
+        </td>
+    </tr>
+}
+
+</table>
