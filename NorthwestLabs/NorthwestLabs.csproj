@@ -308,11 +308,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Shared\EmployeeLayout.cshtml" />
     <Content Include="Views\Shared\HomeLayout.cshtml" />
     <Content Include="Views\Shared\CustomerLayout.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
