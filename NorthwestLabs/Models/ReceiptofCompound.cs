@@ -24,10 +24,12 @@ namespace NorthwestLabs.Models
 
         [ForeignKey("Compound")]
         [Display(Name = "LT")]
-        public int LT { get; set; }
-
+        public virtual int LT { get; set; }
         [ForeignKey("Compound")]
         [Display(Name = "SequenceCode")]
-        public int SequenceCode { get; set; }
+        public virtual int SequenceCode { get; set; }
+
+        public virtual Compound Compound { get; set; }
+
     }
 }

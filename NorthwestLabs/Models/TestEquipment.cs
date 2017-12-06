@@ -11,13 +11,15 @@ namespace NorthwestLabs.Models
     public class TestEquipment
     {
         [ForeignKey("Test")]
-        public int TestID;
+        public virtual int TestID { get; set; }
+        public virtual Test Test { get; set; }
 
         [ForeignKey("Equipment")]
-        public int EquipmentID;
+        public virtual int EquipmentID { get; set; }
+        public virtual Equipment Equipment { get; set; }
 
         [Key]
-        public int TestEquipmentID;
+        public int TestEquipmentID { get; set; }
 
 
     }

@@ -12,17 +12,17 @@ namespace NorthwestLabs.Models
     {
         [Key]
         [Display(Name = "UserName")]
-        public string UserName;
+        public string UserName { get; set; }
 
         [Required]
         [Display(Name = "Password")]
-        public string Password;
+        public string Password { get; set; }
 
         [ForeignKey("Customer")]
-        public int CustomerID;
+        public int CustomerID { get; set; }
 
         [ForeignKey("Employee")]
-        public int EmpID;
+        public int EmpID { get; set; }
 
     }
 }
