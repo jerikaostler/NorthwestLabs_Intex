@@ -12,23 +12,24 @@ namespace NorthwestLabs.Models
     {
         [Key]
         [Display(Name = "EmpID")]
-        public int EmpID;
+        public int EmpID { get; set; }
 
         [Display(Name = "Last Name")]
-        public string EmpFirstName;
+        public string EmpFirstName { get; set; }
 
         [Display(Name = "First Name")]
-        public string EmpLastName;
+        public string EmpLastName { get; set; }
 
         [Display(Name = "Hourly Wage")]
-        public decimal HourlyWage;
+        public decimal HourlyWage { get; set; }
 
         [Display(Name = "Employee Type")]
-        public string Type;
+        public string Type { get; set; }
 
-        [Display(Name = "OfficeID")]
         [ForeignKey("NorthWestOffices")]
-        public int OfficeID;
+        [Display(Name = "OfficeID")]
+        public virtual int OfficeID { get; set; }
+        public virtual NorthWestOffices northwestoffices { get; set; }
 
     }
 }

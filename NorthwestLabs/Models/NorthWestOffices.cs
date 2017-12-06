@@ -12,13 +12,13 @@ namespace NorthwestLabs.Models
     {
         [Key]
         [Display(Name = "OfficeID")]
-        public int OfficeID;
+        public int OfficeID { get; set; }
 
         [Display(Name = "Office Description")]
-        public string Description;
+        public string Description { get; set; }
 
         [Display(Name = "Office Location")]
-        public string Location;
+        public string Location { get; set; } 
 
     }
 }

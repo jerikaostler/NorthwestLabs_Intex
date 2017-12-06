@@ -11,13 +11,13 @@ namespace NorthwestLabs.Models
     public class Material
     {
         [Key]
-        public int MaterialID;
+        public int MaterialID { get; set; }
 
         [Display(Name = "Material Description")]
-        public string Description;
+        public string Description { get; set; }
 
         [Display(Name = "Material Cost")]
-        public decimal MaterialCost;
+        public decimal MaterialCost { get; set; }
 
     }
 }

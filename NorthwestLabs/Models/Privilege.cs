@@ -12,10 +12,10 @@ namespace NorthwestLabs.Models
     {
         [Key]
         [Display(Name = "PrivilegeID")]
-        public int PrivilegeID;
+        public int PrivilegeID { get; set; }
 
         [Display(Name = "Privilege Description")]
-        public string Description;
+        public string Description { get; set; }
 
     }
 }

@@ -16,11 +16,14 @@ namespace NorthwestLabs.Models
 
         [ForeignKey("Employee")]
         [Display(Name = "EmployeeID")]
-        public string EmployeeID { get; set; }
+        public virtual string EmployeeID { get; set; }
+        public virtual Employee employee { get; set; }
+
 
         [ForeignKey("WorkOrderTest")]
         [Display(Name = "WorkOrderTestID")]
-        public string WorkOrderTestID { get; set; }
+        public virtual string WorkOrderTestID { get; set; }
+        public virtual WorkOrderTest workordertest { get; set; }
 
         [Display(Name = "HoursWorked")]
         [Required(ErrorMessage = "This field is required")]

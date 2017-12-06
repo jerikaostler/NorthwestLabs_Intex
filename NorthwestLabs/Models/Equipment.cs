@@ -11,9 +11,9 @@ namespace NorthwestLabs.Models
     public class Equipment
     {
         [Key]
-        public int EquipmentID;
+        public int EquipmentID { get; set; }
 
         [Display(Name = "Equipment Description")]
-        public string Description;
+        public string Description { get; set; }
     }
 }
