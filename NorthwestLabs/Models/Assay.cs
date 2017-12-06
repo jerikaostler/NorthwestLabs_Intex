@@ -37,8 +37,5 @@ namespace NorthwestLabs.Models
         [Display(Name = "AbbreviationCode")]
         [Required(ErrorMessage = "This field is required")]
         public string AbbreviationCode { get; set; }
-
-
-
     }
 }
