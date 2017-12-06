@@ -11,9 +11,9 @@ namespace NorthwestLabs.Models
     public class Status
     {
         [Key]
-        public int StatusID;
+        public int StatusID { get; set; }
 
         [Display(Name = "Status Description")]
-        public string StatusDescription;
+        public string StatusDescription { get; set; }
     }
 }

@@ -11,27 +11,27 @@ namespace NorthwestLabs.Models
     public class WorkOrderTest
     {
         [Key]
-        public int WorkOrderTestID;
+        public int WorkOrderTestID { get; set; }
 
         [ForeignKey("WorkOrderAssay")]
-        public int WorkOrderAssayID;
+        public int WorkOrderAssayID { get; set; }
 
         [ForeignKey("Test")]
-        public int TestID;
+        public int TestID { get; set; }
 
         [ForeignKey("Status")]
-        public int StatusID;
+        public int StatusID { get; set; }
 
         [Display(Name = "Test Result")]
-        public string TestResult;
+        public string TestResult { get; set; }
 
         [Display(Name = "Sample Concentration")]
-        public decimal SampleConcentration;
+        public decimal SampleConcentration { get; set; }
 
         [Display(Name = "Customer Approval")]
-        public bool CustomerApproval;
+        public bool CustomerApproval { get; set; }
 
         [Display(Name = "Raw Data")]
-        public Byte[] RawDataResult;
+        public Byte[] RawDataResult { get; set; }
     }
 }

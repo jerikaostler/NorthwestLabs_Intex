@@ -11,12 +11,16 @@ namespace NorthwestLabs.Models
     public class TestMaterial
     {
         [ForeignKey("Test")]
-        public int TestID;
+        public virtual int TestID { get; set; }
+        public virtual Test Test { get; set; }
+
 
         [ForeignKey("Material")]
-        public int MaterialID;
+        public virtual int MaterialID { get; set; }
+        public virtual Material Material { get; set; }
+
 
         [Key]
-        public int TestMaterialID;
+        public int TestMaterialID { get; set; }
     }
 }
