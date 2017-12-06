@@ -19,10 +19,11 @@ namespace NorthwestLabs.Models
         public string Password { get; set; }
 
         [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
+        public virtual int CustomerID { get; set; }
+        public virtual Customer Customer { get; set; }
 
         [ForeignKey("Employee")]
-        public int EmpID { get; set; }
-
+        public virtual int EmpID { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

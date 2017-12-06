@@ -14,10 +14,6 @@ namespace NorthwestLabs.Models
         [Display(Name ="WorkOrderID")]
         public int WorkOrderID { get; set; }
 
-        [ForeignKey("Customer")]
-        [Display(Name ="CustomerID")]
-        public int CustomerID { get; set; }
-
         [Display(Name = "Comments")]
         public string Comments { get; set; }
 
@@ -32,8 +28,10 @@ namespace NorthwestLabs.Models
         [Display(Name = "SummaryReport")]
         public Byte[] SummaryReport { get; set; }
 
-
-
+        [ForeignKey("Customer")]
+        [Display(Name = "CustomerID")]
+        public virtual int CustomerID { get; set; }
+        public virtual Customer Customer { get; set; }
 
     }
 }

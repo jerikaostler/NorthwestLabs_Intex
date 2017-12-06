@@ -11,28 +11,30 @@ namespace NorthwestLabs.Models
     public class WorkOrderAssay
     {
         [Key]
-        [Display(Name ="WorkOrderAssayID")]
+        [Display(Name = "WorkOrderAssayID")]
         public int WorkOrderAssayID { get; set; }
-
-        [ForeignKey("WorkOrder")]
-        [Display(Name = "WorkOrderID")]
-        public int WorkOrderID { get; set; }
-
-        [ForeignKey("Assay")]
-        [Display(Name = "AssayID")]
-        public int AssayID { get; set; }
-
-        [ForeignKey("Compound")]
-        [Display(Name = "LT")]
-        public int LT { get; set; }
-
-        [ForeignKey("Compound")]
-        [Display(Name = "SequenceCode")]
-        public int SequenceCode { get; set; }
 
         [Display(Name = "AssayReport")]
         public Byte[] AssayReport { get; set; }
 
+        [ForeignKey("WorkOrder")]
+        [Display(Name = "WorkOrderID")]
+        public virtual int WorkOrderID { get; set; }
+        public virtual WorkOrder WorkOrder { get; set; }
 
+        [ForeignKey("Assay")]
+        [Display(Name = "AssayID")]
+        public virtual int AssayID { get; set; }
+        public virtual Assay Assay { get; set; }
+
+        [ForeignKey("Compound")]
+        [Display(Name = "LT")]
+        public virtual int LT { get; set; }
+
+        [ForeignKey("Compound")]
+        [Display(Name = "SequenceCode")]
+        public virtual int SequenceCode { get; set; }
+
+        public virtual Compound Compound { get; set; }
     }
 }

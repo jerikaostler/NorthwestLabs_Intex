@@ -16,12 +16,13 @@ namespace NorthwestLabs.Models
         [ForeignKey("User")]
         [Display(Name = "UserName")]
         [Required]
-        public string UserName { get; set; }
+        public virtual string UserName { get; set; }
+        public virtual User User { get; set; }
 
         [ForeignKey("Privilege")]
         [Display(Name = "PrivilegeID")]
         [Required]
         public virtual int PrivilegeID { get; set; }
-        public virtual Privilege privilege { get; set; }
+        public virtual Privilege Privilege { get; set; }
     }
 }
