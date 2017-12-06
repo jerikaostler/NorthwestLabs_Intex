@@ -148,11 +148,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AssaysController.cs" />
     <Compile Include="Controllers\CompoundsController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CustomerPortalController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EmpCostsController.cs" />
-    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\EquipmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -328,8 +329,6 @@
     <Content Include="Views\Shared\EmployeeLayout.cshtml" />
     <Content Include="Views\Shared\HomeLayout.cshtml" />
     <Content Include="Views\Shared\CustomerLayout.cshtml" />
-    <Content Include="Views\Employee\Index.cshtml" />
-    <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Assays\Create.cshtml" />
     <Content Include="Views\Assays\Delete.cshtml" />
     <Content Include="Views\Assays\Details.cshtml" />
@@ -420,6 +419,13 @@
     <Content Include="Views\WorkOrderTests\Details.cshtml" />
     <Content Include="Views\WorkOrderTests\Edit.cshtml" />
     <Content Include="Views\WorkOrderTests\Index.cshtml" />
+    <Content Include="Views\CustomerPortal\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
