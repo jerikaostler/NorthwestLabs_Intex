@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomerPortalController : Controller
     {
-        // GET: Customer
+        // GET: CustomerPortal
         public ActionResult Index()
         {
             return View();

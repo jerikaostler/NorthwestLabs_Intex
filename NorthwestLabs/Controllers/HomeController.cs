@@ -45,14 +45,14 @@ namespace NorthwestLabs.Controllers
             {
                 FormsAuthentication.SetAuthCookie(UserName, rememberMe);
 
-                return RedirectToAction("Index", "Customer");
+                return RedirectToAction("Index", "CustomerPortal");
 
             }
             else if (string.Equals(UserName, "Employee") && (string.Equals(password, "test")))
             {
                 FormsAuthentication.SetAuthCookie(UserName, rememberMe);
 
-                return RedirectToAction("Index", "Employee");
+                return RedirectToAction("Index", "Admin");
             }
             else
             {

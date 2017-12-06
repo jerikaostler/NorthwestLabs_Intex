@@ -2,17 +2,17 @@
     var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
     string cLayout = "";
 
-    if (controller == "Customer")
+    if (controller == "CustomerPortal")
     {
         cLayout = "~/Views/Shared/CustomerLayout.cshtml";
     }
-    else if (controller == "Employee")
+    else if (controller == "Home")
     {
-        cLayout = "~/Views/Shared/EmployeeLayout.cshtml";
+        cLayout = "~/Views/Shared/HomeLayout.cshtml";
     }
     else
     {
-        cLayout = "~/Views/Shared/HomeLayout.cshtml";
+        cLayout = "~/Views/Shared/EmployeeLayout.cshtml";
     }
 
     Layout = cLayout;
