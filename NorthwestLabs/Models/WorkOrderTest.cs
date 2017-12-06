@@ -14,13 +14,16 @@ namespace NorthwestLabs.Models
         public int WorkOrderTestID { get; set; }
 
         [ForeignKey("WorkOrderAssay")]
-        public int WorkOrderAssayID { get; set; }
+        public virtual int WorkOrderAssayID { get; set; }
+        public virtual WorkOrderAssay WorkOrderAssay { get; set; }
 
         [ForeignKey("Test")]
-        public int TestID { get; set; }
+        public virtual int TestID { get; set; }
+        public virtual Test Test { get; set; }
 
         [ForeignKey("Status")]
-        public int StatusID { get; set; }
+        public virtual int StatusID { get; set; }
+        public virtual Status Status { get; set; }
 
         [Display(Name = "Test Result")]
         public string TestResult { get; set; }
