@@ -1,0 +1,87 @@
+﻿@model IEnumerable<NorthwestLabs.Models.WorkOrderAssay>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Assay.AssayName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Compound.CompoundName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrder.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssayReport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantityInMilligrams)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateArrived)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceivedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Appearance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MolecularMass)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assay.AssayName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Compound.CompoundName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrder.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssayReport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantityInMilligrams)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateArrived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceivedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Appearance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MolecularMass)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WorkOrderAssayID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WorkOrderAssayID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WorkOrderAssayID })
+        </td>
+    </tr>
+}
+
+</table>

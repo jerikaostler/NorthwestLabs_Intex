@@ -1,0 +1,66 @@
+﻿@model NorthwestLabs.Models.Assay
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Assay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimatedDaysToComplete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstimatedDaysToComplete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetailedDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetailedDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfTests)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfTests)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AbbreviationCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AbbreviationCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AssayID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
