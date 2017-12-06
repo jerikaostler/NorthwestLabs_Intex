@@ -29,7 +29,7 @@ namespace NorthwestLabs.Models
         [ForeignKey("NorthWestOffices")]
         [Display(Name = "OfficeID")]
         public virtual int OfficeID { get; set; }
-        public virtual NorthWestOffices northwestoffices { get; set; }
+        public virtual NorthWestOffices NorthWestOffices { get; set; }
 
     }
 }
