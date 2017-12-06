@@ -200,6 +200,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\sb-admin.css" />
     <Content Include="Content\css\sb-admin.min.css" />
+    <Content Include="Content\images\logo.jpg" />
+    <Content Include="Content\images\pharma.jpg" />
+    <Content Include="Content\images\test.jpg" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
@@ -426,6 +429,8 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\CustomerPortal\WorkOrders.cshtml" />
     <Content Include="Views\CustomerPortal\AssayTests.cshtml" />
   </ItemGroup>
