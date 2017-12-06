@@ -24,7 +24,6 @@ namespace NorthwestLabs.DAL
         public DbSet<NorthWestOffices> northwestoffices { get; set; }
         public DbSet<Payment> payment { get; set; }
         public DbSet<Privilege> privilege { get; set; }
-        public DbSet<ReceiptofCompound> receiptofcompound { get; set; }
         public DbSet<Status> status { get; set; }
         public DbSet<Test> test { get; set; }
         public DbSet<TestEquipment> testequipment { get; set; }
