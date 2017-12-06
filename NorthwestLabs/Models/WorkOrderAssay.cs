@@ -14,9 +14,6 @@ namespace NorthwestLabs.Models
         [Display(Name = "WorkOrderAssayID")]
         public int WorkOrderAssayID { get; set; }
 
-        [Display(Name = "AssayReport")]
-        public Byte[] AssayReport { get; set; }
-
         [ForeignKey("WorkOrder")]
         [Display(Name = "WorkOrderID")]
         public virtual int WorkOrderID { get; set; }
@@ -30,11 +27,33 @@ namespace NorthwestLabs.Models
         [ForeignKey("Compound")]
         [Display(Name = "LT")]
         public virtual int LT { get; set; }
-
-        [ForeignKey("Compound")]
-        [Display(Name = "SequenceCode")]
-        public virtual int SequenceCode { get; set; }
-
         public virtual Compound Compound { get; set; }
+
+        [Display(Name = "AssayReport")]
+        public Byte[] AssayReport { get; set; }
+
+        [Display(Name = "QuantityInMilligrams")]
+        [Required(ErrorMessage = "This field is required")]
+        public decimal QuantityInMilligrams { get; set; }
+
+        [Display(Name = "Weight")]
+        [Required(ErrorMessage = "This field is required")]
+        public decimal Weight { get; set; }
+
+        [Display(Name = "DateArrived")]
+        [Required(ErrorMessage = "This field is required")]
+        public string DateArrived { get; set; }
+
+        [Display(Name = "ReceivedBy")]
+        [Required(ErrorMessage = "This field is required")]
+        public string ReceivedBy { get; set; }
+
+        [Display(Name = "Appearance")]
+        [Required(ErrorMessage = "This field is required")]
+        public Byte[] Appearance { get; set; }
+
+        [Display(Name = "MolecularMass")]
+        [Required(ErrorMessage = "This field is required")]
+        public int MolecularMass { get; set; }
     }
 }

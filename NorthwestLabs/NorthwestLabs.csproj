@@ -165,7 +165,6 @@
     <Compile Include="Models\NorthWestOffices.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Privilege.cs" />
-    <Compile Include="Models\ReceiptofCompound.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\TestEquipment.cs" />

@@ -14,8 +14,8 @@ namespace NorthwestLabs.Models
         [Display(Name ="EmpCostID")]
         public int EmpCostID { get; set; }
 
-        [ForeignKey("Employee")]
-        [Display(Name = "EmployeeID")]
+        [ForeignKey("EmpID")]
+        [Display(Name = "EmpID")]
         public virtual int EmpID { get; set; }
         public virtual Employee Employee { get; set; }
 
