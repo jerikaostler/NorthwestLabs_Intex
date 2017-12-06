@@ -10,19 +10,19 @@ namespace NorthwestLabs.Controllers
 
     public class HomeController : Controller
     {
-        [Authorize]
+
         public ActionResult Index()
         {
             return View();
         }
-        [Authorize]
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
-        [Authorize]
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -30,7 +30,6 @@ namespace NorthwestLabs.Controllers
             return View();
         }
 
-        [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
@@ -39,15 +38,21 @@ namespace NorthwestLabs.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
-            String email = form["UserName"].ToString();
+            String UserName = form["UserName"].ToString();
             String password = form["Password"].ToString();
 
-            if (string.Equals(email, "greg@test.com") && (string.Equals(password, "greg")))
+            if (string.Equals(UserName, "Customer") && (string.Equals(password, "test")))
             {
-                FormsAuthentication.SetAuthCookie(email, rememberMe);
+                FormsAuthentication.SetAuthCookie(UserName, rememberMe);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Customer");
 
+            }
+            else if (string.Equals(UserName, "Employee") && (string.Equals(password, "test")))
+            {
+                FormsAuthentication.SetAuthCookie(UserName, rememberMe);
+
+                return RedirectToAction("Index", "Employee");
             }
             else
             {
