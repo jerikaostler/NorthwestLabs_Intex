@@ -32,7 +32,7 @@ namespace NorthwestLabs.Models
 
         [ForeignKey("Customer")]
         public virtual int CustomerID { get; set; }
-        public virtual Customer customer { get; set; }
+        public virtual Customer Customer { get; set; }
 
     }
 }
