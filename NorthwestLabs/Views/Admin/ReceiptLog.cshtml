@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "";
+}
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-header"> <h2>Receipt Log</h2></div>
+            <div class="card-body">
+                <form id="contactForm" name="sentMessage" novalidate>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" id="name" type="text" placeholder="Work Order ID"
+                                       required data-validation-required-message="">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <select class="form-control" id="Assayoptions" placeholder="Assay" required data-validation-required-message="Please Select Which Assay To Run">
+                                    <option disabled selected hidden>Select Assay</option>
+                                    <option>Biochemical Pharmacology (BP)</option>
+                                    <option>DiscoveryScreen® (DS)</option>
+                                    <option>ImmunoScreen® (IS)</option>
+                                    <option>ProfilingScreen® (PF)</option>
+                                    <option>PharmaScreen® (PS)</option>
+                                    <option>CustomScreen™ (CS)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" id="LT" type="text" placeholder="LT"
+                                       required data-validation-required-message="">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" id="LT" type="text" placeholder="Quantity in Milligrams"
+                                       required data-validation-required-message="">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" id="LT" type="text" placeholder="Weight"
+                                       required data-validation-required-message="">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" id="LT" type="text" placeholder="Date Received"
+                                       required data-validation-required-message="">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" id="LT" type="text" placeholder="Received By"
+                                       required data-validation-required-message="">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    Appearance:
+                                    <input type="file" name="pic" accept="image/*">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        <div class="col-md-12">
+                        <div class="form-group">
+                            <input class="form-control" id="molecularmass" type="text" placeholder="Molecular Mass"
+                                   required data-validation-required-message="">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        </div>
+                        
+                    </div>
+
+                        <div class="clearfix"></div>
+                        <br />
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="reset">Submit</button>
+                        </div>
+                        <br />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
