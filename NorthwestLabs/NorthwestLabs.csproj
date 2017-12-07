@@ -443,6 +443,8 @@
     <Content Include="Views\Admin\RequestForQuote.cshtml" />
     <Content Include="Views\CustomerPortal\Pay.cshtml" />
     <Content Include="Views\Admin\ReceiptLog.cshtml" />
+    <Content Include="Views\Admin\undone.cshtml" />
+    <Content Include="Views\Home\undone.cshtml" />
     <Content Include="Views\Admin\Reports.cshtml" />
   </ItemGroup>
   <ItemGroup>

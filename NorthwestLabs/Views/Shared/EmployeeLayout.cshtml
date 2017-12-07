@@ -26,12 +26,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="~/Admin/Index">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Customers">
                     <a class="nav-link" href="/Customers">
                         <i class="fa fa-fw fa-search"></i>
                         <span class="nav-link-text">Customers</span>
                     </a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Work Orders">
                     <a class="nav-link" href="/Admin/WorkOrders">
                         <i class="fa fa-fw fa-table"></i>
                         <span class="nav-link-text">Open Work Orders</span>
@@ -49,11 +55,25 @@
                         <span class="nav-link-text">Receipt Log</span>
                     </a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Quotes">
                     <a class="nav-link" href="/Admin/RequestForQuote">
                         <i class="fa fa-fw fa-table"></i>
                         <span class="nav-link-text">Quotes</span>
                     </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Catalogs">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-table"></i>
+                        <span class="nav-link-text">Catalogs</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <a href="~/Admin/undone">Pharmacology</a> <!-- Link for the Catalog-->
+                        </li>
+                        <li>
+                            <a href="~/Admin/undone">Protocol</a> <!-- Link for the Catalog-->
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <ul class="navbar-nav sidenav-toggler">
