@@ -436,6 +436,7 @@
     <Content Include="Views\CustomerPortal\Quote.cshtml" />
     <Content Include="Views\CustomerPortal\Contact.cshtml" />
     <Content Include="Views\CustomerPortal\Payment.cshtml" />
+    <Content Include="Views\CustomerPortal\Pay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
