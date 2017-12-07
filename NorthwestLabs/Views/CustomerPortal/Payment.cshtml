@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Payment";
+}
+
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Open Work Orders</h2>
+            </div>
+            <div class="card-body">
+                <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>@Html.CheckBox("pay", false)</th>
+                            <th>Work Order</th>
+                            <th>Assay</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>@Html.CheckBox("pay", false)</th> 
+                            <th>1</th>
+                            <th> DiscoveryScreen® (DS)</th>
+                            <th>$550</th>
+                        </tr>
+                        <tr>
+                            <th>@Html.CheckBox("pay", false)</th>
+                            <th>1</th>
+                            <th> CustomScreen™ (CS)</th>
+                            <th>$950</th>
+                        </tr>
+                        <tr>
+                            <th>@Html.CheckBox("pay", false)</th>
+                            <th>2</th>
+                            <th> PharmaScreen™ (PS)</th>
+                            <th>$1450</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <div class="pull-right"><button class="btn-primary btn-md">Pay For Work Order</button></div>
+            </div>
+        </div>
+        <br />
+        <div class="card">
+            <div class="card-header">
+                <h2>All transactions</h2>
+            </div>
+            <div class="card-body">
+
+            </div>
+            <div class="card-footer">
+                <div class="row pull-right"><h2><b>Balance: </b></h2><h2 class="text-danger">$2,500</h2></div>
+
+            </div>
+        </div>
+    </div>
+</div>

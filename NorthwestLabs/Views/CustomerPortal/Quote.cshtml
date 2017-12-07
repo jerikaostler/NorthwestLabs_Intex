@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Quote";
+}
+
+<!--This is the page for the customers to go and request work orders and or ask for quotes uses two forms some inputboxes and a dropdown list-->
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Create an Order</h2> 
+                    </div>
+                    <div class="card-body">
+                        <!--This doesnt actally post to an order or anything aint nobody got time fo dat-->
+                        @using (Html.BeginForm("ACtionMethod", "Controllor", FormMethod.Post))
+                        {
+                            <h2 class="form-signin-heading">Compound Information</h2>
+                            <label for="inputCompoundName" class="sr-only">Compound Name</label>
+                            @Html.TextBox("CompoundName", "", new { type = "text", id = "inputCoumpoundName", @class = "form-control", placeholder = "CompoundName", required = true, autofocus = true })
+                            <br />
+                            <select class="form-control" id="Assayoptions" placeholder="Assay" required data-validation-required-message="Please Select Which Assay To Run">
+                                <option disabled selected hidden>Select Assay</option>
+                                <option>Biochemical Pharmacology (BP)</option>
+                                <option>DiscoveryScreen® (DS)</option>
+                                <option>ImmunoScreen® (IS)</option>
+                                <option>ProfilingScreen® (PF)</option>
+                                <option>PharmaScreen® (PS)</option>
+                                <option>CustomScreen™ (CS)</option>
+                            </select>
+                            <br />
+                            <label for="inputWeight" class="sr-only">Weight of Compound</label>
+                            @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
+                            <br />
+                            <br />
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Create Order</button>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Request a Quote</h2>
+                    </div>
+                    <div class="card-body">
+                        <!--This doesnt actally post to an order or anything aint nobody got time fo dat-->
+                        @using (Html.BeginForm("ACtionMethod", "Controllor", FormMethod.Post))
+                        {
+                            <h2 class="form-signin-heading">Compound Information</h2>
+                            <label for="inputCompoundName" class="sr-only">Compound Name</label>
+                            @Html.TextBox("CompoundName", "", new { type = "text", id = "inputCoumpoundName", @class = "form-control", placeholder = "CompoundName", required = true, autofocus = true })
+                            <br  />
+                            <select class="form-control" id="Assayoptions" placeholder="Assay" required data-validation-required-message="Please Select Which Assay To Run">
+                                <option disabled selected hidden>Select Assay</option>
+                                <option>Biochemical Pharmacology (BP)</option>
+                                <option>DiscoveryScreen® (DS)</option>
+                                <option>ImmunoScreen® (IS)</option>
+                                <option>ProfilingScreen® (PF)</option>
+                                <option>PharmaScreen® (PS)</option>
+                                <option>CustomScreen™ (CS)</option>
+                            </select>
+                            <br />
+                            <label for="inputWeight" class="sr-only">Weight of Compound</label>
+                            @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
+                            <br />
+                            <br />
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Request Quote</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
