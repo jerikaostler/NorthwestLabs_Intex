@@ -13,5 +13,20 @@ namespace NorthwestLabs.Controllers
         {
             return View();
         }
+
+        public ActionResult WorkOrders()
+        {
+            return View();
+        }
+
+        public ActionResult AssayTests()
+        {
+            return View();
+        }
+
+        public ActionResult RequestForQuote()
+        {
+            return View();
+        }
     }
 }
