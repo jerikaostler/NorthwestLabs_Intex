@@ -439,6 +439,7 @@
     <Content Include="Views\Admin\WorkOrders.cshtml" />
     <Content Include="Views\Admin\AssayTests.cshtml" />
     <Content Include="Views\Admin\RequestForQuote.cshtml" />
+    <Content Include="Views\Admin\ReceiptLog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -28,5 +28,10 @@ namespace NorthwestLabs.Controllers
         {
             return View();
         }
+
+        public ActionResult ReceiptLog()
+        {
+            return View();
+        }
     }
 }
