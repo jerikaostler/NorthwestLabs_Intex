@@ -35,5 +35,9 @@ namespace NorthwestLabs.Controllers
         {
             return View();
         }
+        public ActionResult Pay()
+        {
+            return View();
+        }
     }
 }

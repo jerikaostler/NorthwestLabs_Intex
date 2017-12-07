@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Pay";
+}
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h2>Pay</h2>
+            </div>
+            <div class="card-body">
+                <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Work Order</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Method of Payment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Due: 12/30/17</td>
+                            <td>$550</td>
+                            <td>
+                                <select required data-validation-required-message="Please Select a method of payment*">
+                                    <option disabled selected hidden>Select Payment Method</option>
+                                    <option>Echeck</option>
+                                    <option>Credit Card</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary" >Submit Payment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
