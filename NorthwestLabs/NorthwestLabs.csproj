@@ -433,6 +433,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\CustomerPortal\WorkOrders.cshtml" />
     <Content Include="Views\CustomerPortal\AssayTests.cshtml" />
+    <Content Include="Views\CustomerPortal\Quote.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
