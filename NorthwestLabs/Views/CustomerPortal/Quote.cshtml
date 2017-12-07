@@ -31,6 +31,9 @@
                                 <option>CustomScreen™ (CS)</option>
                             </select>
                             <br />
+                            <label for="inputWeight" class="sr-only">Weight of Compound</label>
+                            @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
+                            <br />
                             <br />
                             <button class="btn btn-lg btn-primary btn-block" type="submit">Create Order</button>
                         }
@@ -59,6 +62,9 @@
                                 <option>PharmaScreen® (PS)</option>
                                 <option>CustomScreen™ (CS)</option>
                             </select>
+                            <br />
+                            <label for="inputWeight" class="sr-only">Weight of Compound</label>
+                            @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
                             <br />
                             <br />
                             <button class="btn btn-lg btn-primary btn-block" type="submit">Request Quote</button>
