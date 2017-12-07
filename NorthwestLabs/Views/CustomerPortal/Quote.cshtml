@@ -7,79 +7,86 @@
 
 <div class="content-wrapper">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Create an Order</h2> 
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Create an Order</h2>
+                            </div>
+                            <div class="card-body">
+                                <!--This doesnt actally post to an order or anything aint nobody got time fo dat-->
+                                @using (Html.BeginForm("ACtionMethod", "Controllor", FormMethod.Post))
+                                {
+                                    <h2 class="form-signin-heading">Compound Information</h2>
+                                    <label for="inputCompoundName" class="sr-only">Compound Name</label>
+                                    @Html.TextBox("CompoundName", "", new { type = "text", id = "inputCoumpoundName", @class = "form-control", placeholder = "CompoundName", required = true, autofocus = true })
+                                    <br />
+                                    <select class="form-control" id="Assayoptions" placeholder="Assay" required data-validation-required-message="Please Select Which Assay To Run">
+                                        <option disabled selected hidden>Select Assay</option>
+                                        <option>Biochemical Pharmacology (BP)</option>
+                                        <option>DiscoveryScreen® (DS)</option>
+                                        <option>ImmunoScreen® (IS)</option>
+                                        <option>ProfilingScreen® (PF)</option>
+                                        <option>PharmaScreen® (PS)</option>
+                                        <option>CustomScreen™ (CS)</option>
+                                    </select>
+                                    <br />
+                                    <lable for="DueDate" class="sr-only">Required Due Date *</lable>
+                                    @Html.TextBox("DueDate", "", new { type = "date", id = "inputDueDate", @class = "form-control", placeholder = "Due Date *", Required = true, autofocus = true })
+                                    <br />
+                                    <label for="inputWeight" class="sr-only">Weight of Compound</label>
+                                    @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
+                                    <br />
+                                    <br />
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Create Order</button>
+                                }
+                            </div>
+                            <div class="card-footer"></div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <!--This doesnt actally post to an order or anything aint nobody got time fo dat-->
-                        @using (Html.BeginForm("ACtionMethod", "Controllor", FormMethod.Post))
-                        {
-                            <h2 class="form-signin-heading">Compound Information</h2>
-                            <label for="inputCompoundName" class="sr-only">Compound Name</label>
-                            @Html.TextBox("CompoundName", "", new { type = "text", id = "inputCoumpoundName", @class = "form-control", placeholder = "CompoundName", required = true, autofocus = true })
-                            <br />
-                            <select class="form-control" id="Assayoptions" placeholder="Assay" required data-validation-required-message="Please Select Which Assay To Run">
-                                <option disabled selected hidden>Select Assay</option>
-                                <option>Biochemical Pharmacology (BP)</option>
-                                <option>DiscoveryScreen® (DS)</option>
-                                <option>ImmunoScreen® (IS)</option>
-                                <option>ProfilingScreen® (PF)</option>
-                                <option>PharmaScreen® (PS)</option>
-                                <option>CustomScreen™ (CS)</option>
-                            </select>
-                            <br />
-                            <lable for="DueDate" class="sr-only">Required Due Date *</lable>
-                            @Html.TextBox("DueDate", "", new { type = "date", id = "inputDueDate", @class = "form-control", placeholder = "Due Date *", Required = true, autofocus = true })
-                            <br />
-                            <label for="inputWeight" class="sr-only">Weight of Compound</label>
-                            @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
-                            <br />
-                            <br />
-                            <button class="btn btn-lg btn-primary btn-block" type="submit">Create Order</button>
-                        }
+                    <div class=" col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Request a Quote</h2>
+                            </div>
+                            <div class="card-body">
+                                <!--This doesnt actally post to an order or anything aint nobody got time fo dat-->
+                                @using (Html.BeginForm("ACtionMethod", "Controllor", FormMethod.Post))
+                                {
+                                    <h2 class="form-signin-heading">Compound Information</h2>
+                                    <label for="inputCompoundName" class="sr-only">Compound Name</label>
+                                    @Html.TextBox("CompoundName", "", new { type = "text", id = "inputCoumpoundName", @class = "form-control", placeholder = "Compound Name", required = true, autofocus = true })
+                                    <br />
+                                    <select class="form-control" id="Assayoptions" placeholder="Assay" required data-validation-required-message="Please Select Which Assay To Run">
+                                        <option disabled selected hidden>Select Assay</option>
+                                        <option>Biochemical Pharmacology (BP)</option>
+                                        <option>DiscoveryScreen® (DS)</option>
+                                        <option>ImmunoScreen® (IS)</option>
+                                        <option>ProfilingScreen® (PF)</option>
+                                        <option>PharmaScreen® (PS)</option>
+                                        <option>CustomScreen™ (CS)</option>
+                                    </select>
+                                    <br />
+                                    <lable for="DueDate" class="sr-only">Required Due Date *</lable>
+                                    @Html.TextBox("DueDate", "", new { type = "date", id = "inputDueDate", @class = "form-control", placeholder = "Due Date *", Required = true, autofocus = true })
+                                    <br />
+                                    <label for="inputWeight" class="sr-only">Weight of Compound</label>
+                                    @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
+                                    <br />
+                                    <br />
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Request Quote</button>
+                                }
+                            </div>
+                            <div class="card-footer"></div>
+                        </div>
                     </div>
-                    <div class="card-footer">**Due date is dependant upon the date arrived of the compound sample</div>
                 </div>
             </div>
-            <div class=" col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Request a Quote</h2>
-                    </div>
-                    <div class="card-body">
-                        <!--This doesnt actally post to an order or anything aint nobody got time fo dat-->
-                        @using (Html.BeginForm("ACtionMethod", "Controllor", FormMethod.Post))
-                        {
-                            <h2 class="form-signin-heading">Compound Information</h2>
-                            <label for="inputCompoundName" class="sr-only">Compound Name</label>
-                            @Html.TextBox("CompoundName", "", new { type = "text", id = "inputCoumpoundName", @class = "form-control", placeholder = "Compound Name", required = true, autofocus = true })
-                            <br  />
-                            <select class="form-control" id="Assayoptions" placeholder="Assay" required data-validation-required-message="Please Select Which Assay To Run">
-                                <option disabled selected hidden>Select Assay</option>
-                                <option>Biochemical Pharmacology (BP)</option>
-                                <option>DiscoveryScreen® (DS)</option>
-                                <option>ImmunoScreen® (IS)</option>
-                                <option>ProfilingScreen® (PF)</option>
-                                <option>PharmaScreen® (PS)</option>
-                                <option>CustomScreen™ (CS)</option>
-                            </select>
-                            <br />
-                            <lable for="DueDate" class="sr-only">Required Due Date *</lable>
-                            @Html.TextBox("DueDate", "", new { type = "date", id = "inputDueDate", @class = "form-control", placeholder = "Due Date *", Required = true, autofocus = true })
-                            <br />
-                            <label for="inputWeight" class="sr-only">Weight of Compound</label>
-                            @Html.TextBox("Weight", "", new { type = "text", id = "inputWeight", @class = "form-control", placeholder = "Weight", required = true, autofocus = true })
-                            <br />
-                            <br /> 
-                            <button class="btn btn-lg btn-primary btn-block" type="submit">Request Quote</button>
-                        }
-                    </div>
-                    <div class="card-footer">**Due date is dependant upon the date arrived of the compound sample</div>
-                </div>
+            <div class="card-footer">
+                **Due date is dependant upon the date arrived of the compound sample
             </div>
         </div>
-    </div>
+      </div>
 </div>
