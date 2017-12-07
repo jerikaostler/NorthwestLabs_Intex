@@ -4,84 +4,88 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="content-wrapper">
+    <div class="container-fluid">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContactFirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContactLastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustCity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustState)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustCountry)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DiscountInfo)
-        </th>
-        <th></th>
-    </tr>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustCountry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DiscountInfo)
+                </th>
+                <th></th>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContactFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContactLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustCity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustState)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustCountry)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DiscountInfo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.customerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.customerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.customerID })
-        </td>
-    </tr>
-}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ContactFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ContactLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustCity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustState)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustCountry)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiscountInfo)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.customerID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.customerID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.customerID })
+                    </td>
+                </tr>
+            }
 
-</table>
+        </table>
+        </div>
+</div>
